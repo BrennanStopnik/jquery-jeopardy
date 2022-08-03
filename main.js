@@ -4,7 +4,7 @@ let gameBoard = document.querySelector('#gameBoard');
 let submitAnswer = document.querySelector('.btn');
 let question = document.querySelector('#question');
 let answer = document.querySelector('#answer');
-let scoreBoard = document.querySelector('#score-count');
+let scoreBoard = document.querySelector('#score');
 
 
 // Question groups
@@ -55,7 +55,7 @@ gameBoard.addEventListener('click', function (event){
     q100 = randQ(group100.length);
     if (event.target.innerText === '$100'){
         question.innerText = group100[q100].question;
-        totalScore += 100;
+        score += 100;
         currentQuestion = group100[q100];
     }
 
@@ -63,7 +63,7 @@ gameBoard.addEventListener('click', function (event){
     q200 = randQ(group200.length);
     if (event.target.innerText === '$200'){
         question.innerText = group200[q200].question;
-        totalScore += 200;
+        score += 200;
         currentQuestion = group200[q200];
     }
 
@@ -71,7 +71,7 @@ gameBoard.addEventListener('click', function (event){
     q400 = randQ(group400.length);
     if (event.target.innerText === '$400'){
         question.innerText = group400[q400].question;
-        totalScore += 400;
+        score += 400;
         currentQuestion = group400[q400];
     }
 
@@ -79,7 +79,7 @@ gameBoard.addEventListener('click', function (event){
     q600 = randQ(group600.length);
     if (event.target.innerText === '$600'){
         question.innerText = group600[q600].question;
-        totalScore += 600;
+        score += 600;
         currentQuestion = group600[q600];
     }
 
@@ -87,20 +87,22 @@ gameBoard.addEventListener('click', function (event){
     q800 = randQ(group800.length);
     if (event.target.innerText === '$800'){
         question.innerText = group800[q800].question;
-        totalScore += 800;
+        score += 800;
         currentQuestion = group800[q800];
     }
 })
 
 
+
 // Button setup and answer space.
+    // Still need to work on the scoring.
 
 submitAnswer.addEventListener('click', function(){
     if (answer.value === currentQuestion.answer){
         answer.value = ''; 
-        question.innerText = 'The Question!';
+        question.value = 'The Question!';
         alert(`Correct`);
-        scoreBoard.value = totalScore; 
+        scoreBoard.innerText = `Your Score: ${totalScore}`; 
     } else if (answer.value !== currentQuestion.answer) {
         answer.value = '';
         question.innerText = 'The Question!';
@@ -109,3 +111,5 @@ The correct answer is: ${currentQuestion.answer}.`)
 
     }
 })
+
+console.log(totalScore);
