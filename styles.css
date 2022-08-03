@@ -2,10 +2,8 @@ body {
     background-color: rgb(180, 180, 180);
 }
 
-img {
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 10px;
+image {
+    background-color: black;
 }
 
 .container {
@@ -40,6 +38,8 @@ img {
 .input-group {
     width: 50%;
 }
+
+
 
 #header {
     padding-top: 30px;
