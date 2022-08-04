@@ -38,6 +38,7 @@ readJeopardyData();
 
 
 // Get a random question
+    // the variable is in each question group below
 
 let randQ = (totalQuestions) => {
     let res = (Math.ceil(Math.random() * totalQuestions));
@@ -47,7 +48,8 @@ let randQ = (totalQuestions) => {
 
 // Establish the click for each element on the board
     // Group into different values 
-    // Keep track of the score
+    // Keep track of the score value
+        // Need to figure out a way to get the score updated
 
 gameBoard.addEventListener('click', function (event){
 
