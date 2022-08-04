@@ -112,4 +112,4 @@ The correct answer is: ${currentQuestion.answer}.`)
     }
 })
 
-console.log(totalScore);
+// console.log(totalScore);
