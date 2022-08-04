@@ -19,6 +19,18 @@ image {
     text-shadow: 1px 1px black;
 }
 
+.col-cat {
+    padding: 20px;
+    border: 2px solid black;
+    background-color: blue;
+    color: goldenrod;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+.col-100:hover {
+    background-color: rgb(69, 168, 230);
+}
 .col-200:hover {
     background-color: rgb(69, 168, 230);
 }
@@ -31,12 +43,14 @@ image {
 .col-800:hover {
     background-color: rgb(69, 168, 230);
 }
-.col-1000:hover {
-    background-color: rgb(69, 168, 230);
-}
 
 .input-group {
     width: 50%;
+}
+
+.col:active {
+    background-color: grey;
+    color: darkslategrey;
 }
 
 
