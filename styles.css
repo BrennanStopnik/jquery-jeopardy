@@ -48,7 +48,7 @@ image {
     width: 50%;
 }
 
-.col:active {
+.clicked {
     background-color: grey;
     color: darkslategrey;
 }
